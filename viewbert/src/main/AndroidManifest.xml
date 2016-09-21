@@ -1,0 +1,19 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="co.dmnk.viewbert">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <service
+            android:exported="false"
+            android:name=".AppLifecycleListener"
+        />
+        <activity android:name=".ActivityStarter"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
+            />
+    </application>
+
+</manifest>
