@@ -1,5 +1,5 @@
 # viewbert
-Viebert is a new way to write reusable Views
+Viewbert is a new way to write reusable Views
 
 Welcome to Viewbert.
 With Viewbert, you can finally write views views you can actually reuse. Just place your view anywhere and have fun with it.
