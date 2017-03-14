@@ -595,7 +595,7 @@ public abstract class ViewComponent extends FrameLayout {
         if (ret == null) {
             for (View parent : parents) {
                 if (parent instanceof ViewComponent) {
-                    ret = getActivity();
+                    ret = ((ViewComponent) parent).getActivity();
                     break;
                 }
                 ret = getActivityFromContext(parent.getContext());
@@ -603,7 +603,9 @@ public abstract class ViewComponent extends FrameLayout {
                     break;
                 }
             }
-            activity = new WeakReference<>(ret);
+            if (ret != null) {
+                activity = new WeakReference<>(ret);
+            }
         }
         return ret;
     }
